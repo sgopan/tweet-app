@@ -16,10 +16,7 @@ const Tweet = sequelize.define("Tweet", {
     type: DataTypes.TEXT,
     allowNull: false,
   },
-  created_at: {
-    type: DataTypes.DATE,
-    allowNull: false,
-  },
+
   user_id: {
     type: DataTypes.TEXT,
     allowNull: false,
