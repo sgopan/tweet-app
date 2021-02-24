@@ -22,8 +22,13 @@ const Tweet = sequelize.define("Tweet", {
   },
   user_name: {
     type: DataTypes.TEXT,
-    allowNull: false,
+    allowNull: true,
   },
+  tweeted_at: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  }
+
 });
 
 module.exports = Tweet;

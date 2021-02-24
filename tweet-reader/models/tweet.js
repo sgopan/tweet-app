@@ -16,15 +16,19 @@ const Tweet = sequelize.define("Tweet", {
     type: DataTypes.TEXT,
     allowNull: false,
   },
-
   user_id: {
     type: DataTypes.TEXT,
     allowNull: false,
   },
   user_name: {
     type: DataTypes.TEXT,
-    allowNull: false,
+    allowNull: true,
   },
+  tweeted_at: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  }
+
 });
 
 module.exports = Tweet;
