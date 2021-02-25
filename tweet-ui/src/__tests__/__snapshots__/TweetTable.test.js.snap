@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic snapshot test testing tweet table 1`] = `
+<div>
+  <nav
+    className="navbar navbar-expand navbar-dark bg-dark"
+  >
+    <a
+      className="navbar-brand"
+      href="#home"
+    >
+      Tweet Demo
+    </a>
+    <div
+      className="mr-auto navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <a
+        className="nav-link"
+        data-rb-event-key="#home"
+        href="#home"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        Home
+      </a>
+    </div>
+  </nav>
+  <div
+    className="table-responsive-lg"
+  >
+    <table
+      className="table table-striped table-bordered table-hover"
+    >
+      <thead>
+        <tr>
+          <th>
+            Tweet Id
+          </th>
+          <th>
+            Tweet
+          </th>
+          <th>
+            User Id
+          </th>
+          <th>
+            User Name
+          </th>
+          <th>
+            Tweeted At
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            colSpan="5"
+          >
+            Loading...
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

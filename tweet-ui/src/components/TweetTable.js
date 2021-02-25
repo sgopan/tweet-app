@@ -53,33 +53,7 @@ class TweetTable extends Component {
            </tbody>
         </Table>
       </div>
-      /* <div style={{ margin: "20px" }}>
-         <h1 className="text-center">Tweet Table</h1>
-         <table className="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
-           <thead style={{ backgroundColor: "#ADD8E6" }}>
-             <tr>
-               <th className="th-sm">Tweet Id</th>
-               <th className="th-sm">Tweet</th>
-               <th className="th-sm">User Id</th>
-               <th className="th-sm">User Name</th>
-               <th className="th-sm">Tweeted At</th>
-             </tr>
-           </thead>
-           <tbody>
-             {(tweets.length > 0) ? tweets.map((tweet, index) => {
-               return (
-                 <tr key={index}>
-                   <td>{tweet.tweet_id}</td>
-                   <td>{tweet.tweet_message}</td>
-                   <td>{tweet.user_id}</td>
-                   <td>{tweet.user_name}</td>
-                   <td>{moment(tweet.tweeted_at).format('MMMM Do YYYY')}</td>
-                 </tr>
-               )
-             }) : <tr><td colSpan="5">Loading...</td></tr>}
-           </tbody>
-         </table>
-       </div>*/
+      
     );
   }
 }
