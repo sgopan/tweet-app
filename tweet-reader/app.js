@@ -21,9 +21,22 @@ db.authenticate()
     // start app
     app.listen(port, hostname, () => {
       console.log('Server running at http://' + hostname + ':' + port);
-    });    
+    });
 
-    if(process.env.SYNC_FREQUENCY != '*')  tweet_sync.sync_tweets();
+    if (process.env.SYNC_FREQUENCY != '*') {
+      (async () => {
+        try {
+          console.log('Starting tweet sync');
+          await tweet_sync.sync_tweets();
+          console.log('Completed tweet sync succesfully');
+        }
+        catch (e) {
+          console.error('Exception while syncing tweets', e);
+        }
+
+      })();
+
+    }
     else {
       console.log("Registering twitter sync timer");
       setInterval(async () => {
@@ -32,13 +45,13 @@ db.authenticate()
           await tweet_sync.sync_tweets();
           console.log('Completed tweet sync succesfully');
         }
-        catch(e) {
-          console.error('Exception while syncing tweets', e);        
+        catch (e) {
+          console.error('Exception while syncing tweets', e);
         }
       }, process.env.SYNC_INTERVAL);
     }
     /* */
-  
+
   })
   .catch((error) => {
     console.log("Error while connecting to database to connect to db: ", error);
